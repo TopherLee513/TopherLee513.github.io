@@ -17,9 +17,10 @@
     <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Varela+Round" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
     <!-- Custom styles for this template -->
-    <link href="css/grayscale.min.css" rel="stylesheet">
+    <link href="css/grayscale.css" rel="stylesheet">
 
   </head>
 
@@ -42,7 +43,7 @@
               <a class="nav-link js-scroll-trigger" href="#projects">Projects</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="#signup">Interests</a>
+              <a class="nav-link js-scroll-trigger" href="#signup">Following</a>
             </li>
           </ul>
         </div>
@@ -63,14 +64,18 @@
     <!-- About Section -->
     <section id="about" class="about-section text-center">
       <div class="container">
-        <div class="row">
-          <div class="col-lg-8 mx-auto">
-            <h2 class="text-white mb-4">About:</h2>
-            <p class="text-white-50">I'm 34 and a father of three from Cincinnati, Ohio. I've been in front of a computer for 20+ years and I intend to keep it that way. 
-			I enjoy tinkering with code. The projects I've worked on the most mainly consist of <a href="https://www.blender.org">Blender</a> models and <a href="https://unity3d.com">Unity3D</a>.</p>
+        <h2 class="text-white mb-4">About:</h2>
+        <div class="row align-items-center no-gutters mb-4 mb-lg-5">
+          <div class="col-xl-4 col-lg-7">
+            <img class="img-fluid mb-3 mb-lg-0" src="img/family/IMG_20170421_190301_b.jpg" alt="">
+          </div>
+          <div class="col-xl-8 col-lg-5">
+            <div class="featured-text text-center text-lg-left">
+              <p class="text-white-50 mb-0">I'm 34 and a father of three from Cincinnati, Ohio. I've been in front of a computer for 20+ years and I intend to keep it that way.
+  			I enjoy tinkering with code. The projects I've worked on the most mainly consist of <a href="https://www.blender.org">Blender</a> models and <a href="https://unity3d.com">Unity3D</a>.</p>
+            </div>
           </div>
         </div>
-        <img src="img/blender/leeco.png" class="img-fluid" alt="">
       </div>
     </section>
 
@@ -81,16 +86,20 @@
         <!-- Featured Project Row -->
         <div class="row align-items-center no-gutters mb-4 mb-lg-5">
           <div class="col-xl-8 col-lg-7">
-            <img class="img-fluid mb-3 mb-lg-0" src="img/blender/mw_lighthouse.png" alt="">
+            <video class="img-fluid mb-3 mb-lg-0" autoplay muted loop>
+                 <source src="video/code_vid_v2-light.mp4" type="video/mp4">
+            </video>
           </div>
           <div class="col-xl-4 col-lg-5">
             <div class="featured-text text-center text-lg-left">
-              <h4>Lighthouse</h4>
-              <p class="text-black-50 mb-0">My (WIP) rendition of the Seyda Neen Lighthouse from The Elder Scrolls III: Morrowind</p>
-            </div>
+              <h4>Programming:</h4>
+              <p class="text-black-50 mb-0">My primary passion is probably programming. I've learned a lot from open source projects and I've even contributed to an app that made it to the Play Store. :)</p>
+<p class="text-black-50 mb-0">The next step is to write my own app or program. I've got some ideas I've been working on. Stay tuned.</p>
           </div>
         </div>
-
+        <div class="featured-text text-center text-lg-left">
+            <h4>3D Modeling:</h4>
+        </div>
         <!-- Project One Row -->
         <div class="row justify-content-center no-gutters mb-5 mb-lg-0">
           <div class="col-lg-6">
@@ -128,6 +137,24 @@
             </div>
           </div>
         </div>
+        <!-- Project Three Row -->
+        <div class="row justify-content-center no-gutters mb-5 mb-lg-0">
+          <div class="col-lg-6">
+            <img class="img-fluid" src="img/blender/mw_lighthouse.png" alt="">
+          </div>
+          <div class="col-lg-6">
+            <div class="bg-black text-center h-100 project">
+              <div class="d-flex h-100">
+                <div class="project-text w-100 my-auto text-center text-lg-left">
+                  <h4 class="text-white">Lighthouse</h4>
+                  <p class="mb-0 text-white-50">My (WIP) rendition of the Seyda Neen Lighthouse from The Elder Scrolls III: Morrowind</p>
+				          <p class="mb-0 text-white-50"><a href="downloads/#">Download Not Ready</a></p>
+                  <hr class="d-none d-lg-block mb-0 ml-0">
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
 
       </div>
     </section>
@@ -136,7 +163,7 @@
     <section id="signup" class="signup-section">
       <div class="container">
         <div class="row">
-          <div class="col-md-10 col-lg-8 mx-auto text-center"> 
+          <div class="col-md-10 col-lg-8 mx-auto text-center">
 			        <i class="far fa-paper-plane fa-2x mb-2 text-white"></i>
                     <h2 class="text-white mb-5">Followed Projects:</h2>
               <p>OpenMW</p>
@@ -219,9 +246,12 @@
     <!-- Footer -->
     <footer class="bg-black small text-center text-white-50">
       <div class="container">
-        <p> Copyright &copy; Topher Lee 2019 </p>
+        <p> - Copyright &copy; Topher Lee 2019 - </p>
 		Powered by <a href="https://github.com/blackrockdigital/startbootstrap-grayscale/">Grayscale</a> & <a href="https://getbootstrap.com">Bootstrap</a>
-      </div>
+        <p> - Hosted on <a href="https://github.com/">Github</a> -</p>
+        <p> - Photo of Cincinnati: <a href="https://upload.wikimedia.org/wikipedia/commons/6/69/Downtown_Cincinnati_viewed_from_Mt_At_Adams.jpg">Wikipedia</a> - <a href="https://creativecommons.org/share-your-work/public-domain/cc0/">CC0 License</a></p>
+        <p> - Video of the sea: <a href="https://videos.pexels.com/videos/a-beautiful-view-of-the-sea-at-dawn-1757798">Pexels</a> - <a href="https://creativecommons.org/share-your-work/public-domain/cc0/">CC0 License</a></p>
+	  </div>
     </footer>
 
     <!-- Bootstrap core JavaScript -->
