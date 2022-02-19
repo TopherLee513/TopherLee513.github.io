@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg
+	version="1.1"
+	xmlns="http://www.w3.org/2000/svg"
+	xmlns:xlink="http://www.w3.org/1999/xlink"
+	x="0%" y="0%"
+	width="100%" height="100%"
+	viewBox="0 0 1024.0 1024.0"
+	enable-background="new 0 0 1024.0 1024.0"
+	xml:space="preserve">
+	<path
+		fill="#FFFFFF"
+		stroke="#000000"
+		fill-opacity="1.000"
+		stroke-opacity="1.000"
+		fill-rule="nonzero"
+		stroke-width="20.48"
+		stroke-linejoin="miter"
+		stroke-linecap="square"
+		d="M528.00,32.00L992.00,32.00L992.00,496.00L528.00,496.00z"/>
+	<path
+		fill="#FFFFFF"
+		stroke="#000000"
+		fill-opacity="1.000"
+		stroke-opacity="1.000"
+		fill-rule="nonzero"
+		stroke-width="20.48"
+		stroke-linejoin="miter"
+		stroke-linecap="square"
+		d="M528.00,528.00L992.00,528.00L992.00,992.00L528.00,992.00z"/>
+	<path
+		fill="#FFFFFF"
+		stroke="#000000"
+		fill-opacity="1.000"
+		stroke-opacity="1.000"
+		fill-rule="nonzero"
+		stroke-width="20.48"
+		stroke-linejoin="miter"
+		stroke-linecap="square"
+		d="M32.00,32.00L496.00,32.00L496.00,496.00L32.00,496.00z"/>
+	<path
+		fill="#FFFFFF"
+		stroke="#000000"
+		fill-opacity="1.000"
+		stroke-opacity="1.000"
+		fill-rule="nonzero"
+		stroke-width="20.48"
+		stroke-linejoin="miter"
+		stroke-linecap="square"
+		d="M32.00,528.00L496.00,528.00L496.00,992.00L32.00,992.00z"/>
+</svg>

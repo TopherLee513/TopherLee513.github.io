@@ -1,0 +1,456 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="description" content="Topher's Homepage">
+    <meta name="author" content="Christopher Lee">
+    <title>topher-lee.nft</title>
+    <meta name="og:site_name" content="topher-lee.nft">
+<meta name="og:title" content="topher-lee.nft">
+<meta name="og:url" content="topher-lee.nft">
+<meta name="og:type" content="website">
+<meta name="og:description" content="Blockchain Domain for Topher Lee">
+<meta name="og:image" content="./images/banner.png">
+
+<meta name="twitter:title" content="topher-lee.nft">
+<meta name="twitter:url" content="topher-lee.nft">
+<meta name="twitter:description" content="Blockchain Domain for Topher Lee">
+<meta name="twitter:image" content="./images/banner.png">
+<meta name="twitter:card" content="">
+    <link rel="icon" type="image/png" sizes="32x32" href="./images/icons/winicon.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./images/icons/winicon.png">
+
+    <link rel="mask-icon" href="./images/icons/winicon.png" color="#be0000">
+    <meta name="msapplication-TileColor" content="#be0000">
+    <meta name="theme-color" content="#be0000">
+  
+   <link rel="stylesheet" href="./css/styles.css" />
+   <script defer src="https://use.fontawesome.com/aa827de8a8.js"></script>
+</head>
+<body class="windows9x">
+
+<nav class="nav">
+  <button id="startButton" onclick="toggleStartMenu()">
+  <div class="startButtonIcon">
+
+  </div>
+  <div class="startButtonText">
+    Start
+  </div>
+</button>
+
+<script>
+  function toggleStartMenu() {
+    var start = document.getElementById('StartMenu');
+    var desktop = document.getElementById('desktopBlur');
+    
+    if(start){
+      if(start.classList.contains('hidden')){
+          start.classList.remove('hidden');
+          desktop.classList.remove('hidden');
+      }
+      else {
+        start.classList.add('hidden');
+        desktop.classList.add('hidden');
+      }
+    }
+  }
+</script>
+  <ul class="navbar" id="navbar">
+
+  <li class="nav-item">
+  <a class="nav-link" href="/">
+    <div class="nav-link-icon fa fa-home">
+    </div>
+    <div class="nav-link-text">
+      Home
+    </div>
+  </a>
+</li>
+  
+  <li class="nav-item">
+  <a class="nav-link" href="/about">
+    <div class="nav-link-icon fa fa-question">
+    </div>
+    <div class="nav-link-text">
+      About
+    </div>
+  </a>
+</li>
+  
+  <li class="nav-item">
+  <a class="nav-link" href="/art">
+    <div class="nav-link-icon bi bi-grid">
+    </div>
+    <div class="nav-link-text">
+      Art
+    </div>
+  </a>
+</li>
+  
+  </ul>
+  <div id="clock" onclick="toggleTimeDate()">
+  <div id="clockText">
+  </div>
+  <div id="dayText">
+  </div>
+</div>
+
+<script>
+// Based on code from W3
+let timeString = "";
+let dateString = "";
+
+let isShowTime = true;
+
+const weekdays = ["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"];
+const months = ["January","February","March","April","May","June","July","August","September","October","November","December"];
+
+  runTimeUI();
+
+function runTimeUI() {
+  dateString = getDateString();
+  //console.log('Date: ' + dateString);
+  timeString = getTimeString();
+  //console.log('Time: ' + timeString)
+  const clock = document.getElementById('clock');
+  document.getElementById('clockText').innerText = show(isShowTime);
+  document.getElementById('dayText').innerText = getWeekdayString();
+  setTimeout(runTimeUI, 300);
+}
+
+function getDateString() {
+  let today = new Date();
+  
+  let date = today.getDate();
+  let year = today.getFullYear();
+  let month = today.getMonth() + 1;
+  
+  var string = month + " " + date + ", " + year;
+  //console.log('Time: ' + string);
+  return string;
+}
+function getMonthString() {
+  let today = new Date();
+  let month = months[today.getMonth()];
+  
+  var string = month;
+  //console.log('Month: ' + string);
+  return string;
+}
+function getTimeString() {
+  let time = new Date();
+  let hours = time.getHours();
+  let minutes = time.getMinutes();
+  let seconds = time.getSeconds();
+
+  hours = checkHours(hours);
+  minutes = checkZero(minutes);
+  seconds = checkZero(seconds);
+  
+  var string = hours + ":" + minutes + ":" + seconds;
+  //console.log('Time: ' + timeString);
+  return string;
+}
+function getWeekdayString() {
+  let today = new Date();
+  let weekday = weekdays[today.getDay()];
+  
+  var string = weekday
+  //console.log('Weekday: ' + string);
+  return string;
+}
+function checkZero(i) {
+  if (i < 10) {
+    i = "0" + i
+  }; // add zero in front of numbers < 10
+  return i;
+}
+function checkHours(i) {
+  if (i > 12) {
+    i = i - 12
+  }; // Use 12-hour format
+  return i;
+}
+function show(bool) {
+  var i = "";
+  if (bool) {
+    i = getTimeString();
+  } else {
+    i = getDateString();
+  }
+  //console.log("Showing: " + i);
+  return i;
+}
+function toggleTimeDate() {
+//console.log('Toggle Time/Date');
+  if (isShowTime) {
+    isShowTime = false;
+  } else
+  {
+    isShowTime = true;
+  }
+}
+</script>
+</nav>
+<main id="desktop">
+  <ul id="window-list">
+    <li class="window-item" id="homepage">
+  <div class="window">
+    <div class="window-header">
+  <div class="window-icon bi bi-grid">
+  </div>
+  <h2 class="window-title">
+    Homepage
+  </h2>
+    
+<ul class="window-options">
+  
+    <li class="option">
+  <button class="option-link" onclick="minimize('homepage')">
+    <div class="option-icon bi bi-grid">
+    </div>
+  </button>
+</li>
+    
+    <li class="option">
+  <button class="option-link" onclick="maximize('homepage')">
+    <div class="option-icon bi bi-grid">
+    </div>
+  </button>
+</li>
+    
+    <li class="option">
+  <button class="option-link" onclick="closed('homepage')">
+    <div class="option-icon bi bi-grid">
+    </div>
+  </button>
+</li>
+    
+</ul>
+</div>
+      <div class="window-body">
+  <img class="banner" src="../../images/banner.png" />
+<h1 class="window-inner-header">
+  topher-lee.nft
+</h1>
+<div class="subsection">
+  <p>
+    Public Profile Portfolio Project Page
+  </p>
+</div>
+</div>
+
+  </div>
+</li>
+  </ul>
+</main>
+
+<div id="desktopBlur" class="hidden">
+  <div id="StartMenu" class="hidden">
+    <div class="start-menu-header">
+      <img class="start-header-pfp" src="./images/profile.jpg" />
+      <h3 class="start-header-text">
+        Topher
+      </h3>
+    </div>
+    <div class="start-body">
+      
+<div class="start-left">
+  
+    <ul class="start-item-group">
+  <h4 class="start-group-header">
+    Themes
+  </h4>
+
+    <li id="windows9x" class="start-item">
+    <button class="start-item-link" onclick="switchTheme('windows9x')">
+      <img class="start-item-icon" src="./images/icons/icon-9x.png"/>
+      <div class="start-item-text">
+        Windows 95
+      </div>
+    </button>
+</li>
+ 
+    <li id="windowsXP" class="start-item">
+    <button class="start-item-link" onclick="switchTheme('windowsXP')">
+      <img class="start-item-icon" src="./images/icons/icon-XP.png"/>
+      <div class="start-item-text">
+        Windows XP
+      </div>
+    </button>
+</li>
+ 
+    <li id="windows10" class="start-item">
+    <button class="start-item-link" onclick="switchTheme('windows10')">
+      <img class="start-item-icon" src="./images/icons/icon-10.png"/>
+      <div class="start-item-text">
+        Windows 10
+      </div>
+    </button>
+</li>
+ 
+</ul>
+    
+    <ul class="start-item-group">
+  <h4 class="start-group-header">
+    Links
+  </h4>
+
+    <li id="opensea" class="start-item">
+    <a class="start-item-link" href="https://opensea.com">
+      <div class="start-item-icon fa fa-anchor"></div>
+      <div class="start-item-text">
+        OpenSea
+      </div>
+    </a>
+</li>
+    
+    <li id="twitter" class="start-item">
+    <a class="start-item-link" href="https://twitter.com/TopherLee513">
+      <div class="start-item-icon fa fa-twitter"></div>
+      <div class="start-item-text">
+        Twitter
+      </div>
+    </a>
+</li>
+    
+    <li id="github" class="start-item">
+    <a class="start-item-link" href="https://TopherLee513.github.io">
+      <div class="start-item-icon fa fa-github"></div>
+      <div class="start-item-text">
+        Github
+      </div>
+    </a>
+</li>
+    
+</ul>
+    
+</div>
+      
+<div class="start-right">
+  
+    <ul class="start-item-group">
+  <h4 class="start-group-header">
+    Applications
+  </h4>
+
+    <li id="fileManager" class="start-item">
+    <a class="start-item-link" href="">
+      <img class="start-item-icon" src="./images/icons/folder.png"/>
+      <div class="start-item-text">
+        File Manager
+      </div>
+    </a>
+</li>
+    
+    <li id="mediaPlayer" class="start-item">
+    <a class="start-item-link" href="">
+      <img class="start-item-icon" src="./images/icons/media.png"/>
+      <div class="start-item-text">
+        Media Player
+      </div>
+    </a>
+</li>
+    
+    <li id="notepad" class="start-item">
+    <a class="start-item-link" href="">
+      <img class="start-item-icon" src="./images/icons/notepad.png"/>
+      <div class="start-item-text">
+        Notepad
+      </div>
+    </a>
+</li>
+    
+    <li id="console" class="start-item">
+    <a class="start-item-link" href="">
+      <img class="start-item-icon" src="./images/icons/console.png"/>
+      <div class="start-item-text">
+        Console
+      </div>
+    </a>
+</li>
+    
+</ul>
+    
+</div>
+    </div>
+      
+  
+  <div class="start-footer">
+    <ul class="start-footer-options">
+
+    <div id="bPower" class="start-footer-option">
+  <button class="start-footer-option-link">
+    <div class="start-footer-option-icon fa fa-power">
+
+    </div>
+  </button>
+  <div class="start-footer-option-label">
+    Power
+  </div>
+</div>
+
+    <div id="bLogoff" class="start-footer-option">
+  <button class="start-footer-option-link">
+    <div class="start-footer-option-icon fa fa-logoff">
+
+    </div>
+  </button>
+  <div class="start-footer-option-label">
+    Logoff
+  </div>
+</div>
+
+     </ul>
+    <div class="start-footer-attribution">
+      Copyright &copy; 2022 - topher-lee.nft
+    </div>
+  </div>
+  </div>
+</div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script>
+const themes = [ 'windows9x', 'windowsXP', 'windows10' ];
+  function switchTheme(theme) {
+    
+    if (theme) {
+      console.log(`Switch Theme to ${theme}`);
+      
+      document.body.classList.remove(...themes);
+      document.body.classList.add(theme);
+      saveTheme(theme);
+    } else
+    {
+      loadTheme();
+    }
+  }
+  function loadTheme(){
+   if(localStorage.getItem('winTheme')){
+       console.log(`Load Theme ${localStorage.getItem('winTheme')}`);
+       document.body.classList.remove(...themes);
+       document.body.classList.add(localStorage.getItem('winTheme'));
+    } else {
+      document.body.classList.add('windows9x');
+    }
+  }
+  function saveTheme(theme){
+      localStorage.setItem('winTheme', theme);
+  }
+  function minimize(id) {
+    alert('Minimized');
+  }
+  function maximize(id) {
+    alert('Maximized');
+  }
+  function closed(id) {
+    alert('Closed');
+  }
+switchTheme();
+</script>
+
+</body>
+</html>
